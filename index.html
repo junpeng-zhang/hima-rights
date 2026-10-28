@@ -1,0 +1,121 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0A0C11">
+<title>鸿蒙智行 · 购车权益 2026-10</title>
+<style>
+  :root{color-scheme:dark}
+  *{-webkit-tap-highlight-color:transparent}
+  body{margin:0;background:#0A0C11;color:#E9EEF7;
+    font-family:-apple-system,"PingFang SC","Hiragino Sans GB",sans-serif}
+  header{position:sticky;top:0;z-index:9;background:#0A0C11f2;backdrop-filter:blur(14px);
+    padding:14px 16px 10px;border-bottom:1px solid #ffffff12}
+  h1{margin:0;font-size:18px;font-weight:700}
+  .sub{color:#7C879B;font-size:12px;margin-top:3px}
+  .bar{margin-top:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  input{flex:1;min-width:140px;background:#12161F;border:1px solid #ffffff1a;color:#E9EEF7;
+    border-radius:10px;padding:9px 12px;font-size:16px;outline:none}
+  input:focus{border-color:#4F8CFF}
+  #brands{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px}
+  button{background:#12161F;border:1px solid #ffffff1a;color:#AEB8C9;border-radius:999px;
+    padding:7px 13px;font-size:13px;cursor:pointer;white-space:nowrap}
+  button.on{background:#4F8CFF;border-color:#4F8CFF;color:#fff}
+  main{padding:14px 12px 40px;display:grid;gap:14px;grid-template-columns:1fr}
+  @media (min-width:560px){ main{grid-template-columns:repeat(2,1fr)} }
+  @media (min-width:960px){ main{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px} }
+  .card{padding:0;text-align:left;background:#0F131B;border:1px solid #ffffff10;
+    border-radius:14px;overflow:hidden;display:block;width:100%;min-width:0}
+  .card:active{border-color:#4F8CFF88}
+  .card img{width:100%;height:auto;display:block}
+  .meta{display:flex;justify-content:space-between;align-items:baseline;gap:6px;
+    padding:9px 10px 0;font-size:13px}
+  .meta b{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .total{color:#4F8CFF;font-weight:700;font-size:12px;flex:none}
+  .sub2{padding:2px 10px 10px;color:#6E7889;font-size:11px}
+  /* 大图 */
+  .lb{position:fixed;inset:0;background:#07090D;display:none;flex-direction:column;z-index:50}
+  .lb.on{display:flex}
+  .lb-bar{display:flex;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top)) 14px 10px}
+  .lb-title{flex:1;font-size:15px;font-weight:600}
+  .lb-bar button{font-size:13px;padding:7px 12px}
+  .lb-body{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;padding:0 14px}
+  .lb-body img{width:100%;border-radius:10px;display:block}
+  .lb-tip{color:#7C879B;font-size:12px;text-align:center;padding:12px 0 40px}
+  .toast{position:fixed;left:50%;bottom:40px;transform:translateX(-50%);background:#ffffff15;
+    color:#fff;font-size:13px;padding:10px 18px;border-radius:999px;opacity:0;
+    transition:.25s;pointer-events:none;z-index:60}
+  .toast.on{opacity:1}
+</style></head><body>
+<header>
+  <h1>鸿蒙智行 · 购车权益</h1>
+  <div class="sub">2026-10 · 官方全国口径 · 华为商城 · 更新于 2026-10-27</div>
+  <div class="bar">
+    <input id="q" placeholder="搜索车型，如 R7" enterkeyhint="search">
+    <div id="brands"><button data-brand="全部">全部</button><button data-brand="智界">智界</button><button data-brand="享界">享界</button><button data-brand="尚界">尚界</button></div>
+  </div>
+</header>
+<main id="grid"><button class="card" data-id="zhijie-r7" data-name="智界 R7" data-brand="智界" data-img="out/zhijie-r7.png" data-talk="out/talk/zhijie-r7.txt" data-total="44,500"><img src="out/thumbs/zhijie-r7.jpg" loading="lazy" alt="智界 R7"><div class="meta"><b>智界 R7</b><span class="total">44,500</span></div><div class="sub">智界 · 全面焕新</div></button><button class="card" data-id="zhijie-rx" data-name="智界 RX" data-brand="智界" data-img="out/zhijie-rx.png" data-talk="out/talk/zhijie-rx.txt" data-total="40,500"><img src="out/thumbs/zhijie-rx.jpg" loading="lazy" alt="智界 RX"><div class="meta"><b>智界 RX</b><span class="total">40,500</span></div><div class="sub">智界 · 为驾驶而生</div></button><button class="card" data-id="zhijie-v9" data-name="智界 V9" data-brand="智界" data-img="out/zhijie-v9.png" data-talk="out/talk/zhijie-v9.txt" data-total="57,500"><img src="out/thumbs/zhijie-v9.jpg" loading="lazy" alt="智界 V9"><div class="meta"><b>智界 V9</b><span class="total">57,500</span></div><div class="sub">智界 · 全景智慧旗舰MPV</div></button><button class="card" data-id="zhijie-s7" data-name="智界 新S7" data-brand="智界" data-img="out/zhijie-s7.png" data-talk="out/talk/zhijie-s7.txt" data-total="63,000"><img src="out/thumbs/zhijie-s7.jpg" loading="lazy" alt="智界 新S7"><div class="meta"><b>智界 新S7</b><span class="total">63,000</span></div><div class="sub">智界 · 稳得住的快</div></button><button class="card" data-id="xiangjie-g9" data-name="享界 G9" data-brand="享界" data-img="out/xiangjie-g9.png" data-talk="out/talk/xiangjie-g9.txt" data-total="103,000"><img src="out/thumbs/xiangjie-g9.jpg" loading="lazy" alt="享界 G9"><div class="meta"><b>享界 G9</b><span class="total">103,000</span></div><div class="sub">享界 · 科技豪华硬派SUV</div></button><button class="card" data-id="xiangjie-s9" data-name="享界 S9" data-brand="享界" data-img="out/xiangjie-s9.png" data-talk="out/talk/xiangjie-s9.txt" data-total="91,000"><img src="out/thumbs/xiangjie-s9.jpg" loading="lazy" alt="享界 S9"><div class="meta"><b>享界 S9</b><span class="total">91,000</span></div><div class="sub">享界 · 旗舰9系 越境豪华</div></button><button class="card" data-id="xiangjie-s9t" data-name="享界 S9T" data-brand="享界" data-img="out/xiangjie-s9t.png" data-talk="out/talk/xiangjie-s9t.txt" data-total="91,000"><img src="out/thumbs/xiangjie-s9t.jpg" loading="lazy" alt="享界 S9T"><div class="meta"><b>享界 S9T</b><span class="total">91,000</span></div><div class="sub">享界 · 人生如旅 随心所驭</div></button><button class="card" data-id="xiangjie-v8" data-name="享界 V8" data-brand="享界" data-img="out/xiangjie-v8.png" data-talk="out/talk/xiangjie-v8.txt" data-total="多重权益"><img src="out/thumbs/xiangjie-v8.jpg" loading="lazy" alt="享界 V8"><div class="meta"><b>享界 V8</b><span class="total">多重权益</span></div><div class="sub">享界 · 家庭智慧旗舰MPV</div></button><button class="card" data-id="shangjie-h5" data-name="尚界 H5" data-brand="尚界" data-img="out/shangjie-h5.png" data-talk="out/talk/shangjie-h5.txt" data-total="61,583"><img src="out/thumbs/shangjie-h5.jpg" loading="lazy" alt="尚界 H5"><div class="meta"><b>尚界 H5</b><span class="total">61,583</span></div><div class="sub">尚界 · 一步到位</div></button><button class="card" data-id="shangjie-z7" data-name="尚界 Z7" data-brand="尚界" data-img="out/shangjie-z7.png" data-talk="out/talk/shangjie-z7.txt" data-total="多重权益"><img src="out/thumbs/shangjie-z7.jpg" loading="lazy" alt="尚界 Z7"><div class="meta"><b>尚界 Z7</b><span class="total">多重权益</span></div><div class="sub">尚界 · 风尚科技轿跑</div></button><button class="card" data-id="shangjie-z7t" data-name="尚界 Z7T" data-brand="尚界" data-img="out/shangjie-z7t.png" data-talk="out/talk/shangjie-z7t.txt" data-total="多重权益"><img src="out/thumbs/shangjie-z7t.jpg" loading="lazy" alt="尚界 Z7T"><div class="meta"><b>尚界 Z7T</b><span class="total">多重权益</span></div><div class="sub">尚界 · 风尚科技猎装</div></button></main>
+
+<div class="lb" id="lb">
+  <div class="lb-bar">
+    <span class="lb-title" id="lbTitle"></span>
+    <button id="copyBtn">复制话术</button>
+    <button id="saveBtn">保存图片</button>
+    <button id="closeBtn">关闭</button>
+  </div>
+  <div class="lb-body">
+    <img id="lbImg" alt="">
+    <div class="lb-tip">长按图片可直接保存到相册 / 转发客户</div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+  const q = document.getElementById('q');
+  let brand = '全部';
+  function apply() {
+    const kw = q.value.trim().toLowerCase();
+    document.querySelectorAll('.card').forEach(el => {
+      const okKw = !kw || el.dataset.name.toLowerCase().includes(kw) ||
+                   el.dataset.brand.toLowerCase().includes(kw) || el.dataset.id.includes(kw);
+      const okBrand = brand === '全部' || el.dataset.brand === brand;
+      el.style.display = (okKw && okBrand) ? '' : 'none';
+    });
+  }
+  q.addEventListener('input', apply);
+  document.querySelectorAll('#brands button').forEach(b => b.addEventListener('click', () => {
+    brand = b.dataset.brand;
+    document.querySelectorAll('#brands button').forEach(x => x.classList.toggle('on', x === b));
+    apply();
+  }));
+  document.querySelector('#brands button').classList.add('on');
+
+  const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'),
+        lbTitle = document.getElementById('lbTitle'), toast = document.getElementById('toast');
+  let curTalk = '';
+  function showToast(t) {
+    toast.textContent = t; toast.classList.add('on');
+    setTimeout(() => toast.classList.remove('on'), 1600);
+  }
+  document.querySelectorAll('.card').forEach(c => c.addEventListener('click', async () => {
+    lbTitle.textContent = c.dataset.name + ' · ' + c.dataset.total;
+    lbImg.src = c.dataset.img;
+    curTalk = c.dataset.talk;
+    document.getElementById('saveBtn').onclick = () => {
+      const a = document.createElement('a');
+      a.href = c.dataset.img; a.download = c.dataset.name + '.png';
+      document.body.appendChild(a); a.click(); a.remove();
+    };
+    document.getElementById('copyBtn').onclick = async () => {
+      try {
+        const r = await fetch(curTalk);
+        const t = await r.text();
+        await navigator.clipboard.writeText(t);
+        showToast('话术已复制');
+      } catch (e) { showToast('复制失败，请长按选择'); }
+    };
+    lb.classList.add('on');
+  }));
+  document.getElementById('closeBtn').onclick = () => lb.classList.remove('on');
+  lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('on'); });
+</script></body></html>
